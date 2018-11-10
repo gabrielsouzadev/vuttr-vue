@@ -1,0 +1,14 @@
+/*
+* Grid
+*/
+
+@mixin grid($with: $container) {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    max-width: $container;
+}
+
+.container {
+    @include grid($container);
+}

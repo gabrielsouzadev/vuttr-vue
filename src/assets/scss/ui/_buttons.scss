@@ -1,0 +1,31 @@
+/* Buttons */
+
+.bt {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    border: 0;
+    border-radius: $border-radius;
+    padding: 0 2.6rem;
+    margin: .7rem;
+    background: $color-primary;
+    color: $text-color-secondary;
+    font-size: 1.8rem;
+    font-weight: 600;
+    
+    @include transition;
+
+    &:hover {
+        background: $color-secondary;
+        cursor: pointer;
+    }
+
+    &:active {
+        background: $color-primary-dark;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

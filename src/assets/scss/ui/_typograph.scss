@@ -1,0 +1,19 @@
+/*
+* Typograph
+*/
+
+.title {
+    font-size: $h1-size;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: $h3-size;
+    font-weight: 600;
+}
+
+.title,
+.subtitle {
+    margin: 1rem 0;
+}
+

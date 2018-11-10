@@ -1,0 +1,7 @@
+/*
+* Transition
+*/
+
+@mixin transition($time: .2s) {
+    transition: ease $time;
+}

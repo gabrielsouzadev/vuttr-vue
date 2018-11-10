@@ -1,0 +1,30 @@
+/*
+* Base
+*/
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+html {
+	font-size: 62.5%;
+	text-rendering: optimizeLegibility;
+	font-variant-ligatures: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    font-family: $font-family-base;
+	font-size: $font-size-base;
+	color: $text-color;
+    background: $body-bg;
+    position: relative;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
