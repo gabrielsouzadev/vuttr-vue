@@ -1,40 +1,45 @@
 import API from '@/api';
-const toolService = new API();
 
 const getTools = (context) => {
-    toolService.getAllTools()
+    API.getAllTools()
         .then((response) => {
             context.commit('TOOLS_UPDATE', response.data);
         })
-        .catch((error) => {
-            console.log(error);
+        .catch((err) => {
+            console.log(err);
         })
 };
 
 const searchTool = (context, data) => {
-    toolService.searchTools(data)
+    API.searchToolsByTitle(data)
         .then((response) => {
             context.commit('TOOLS_UPDATE', response.data);
         })
-        .catch((error) => {
-            console.log(error);
+        .catch((err) => {
+            console.log(err);
         })
 };
 
 const searchTags = (context, data) => {
-    toolService.searchToolsByTags(data)
+    API.searchToolsByTags(data)
         .then((response) => {
             context.commit('TOOLS_UPDATE', response.data);
         })
-        .catch((error) => {
-            console.log(error);
+        .catch((err) => {
+            console.log(err);
         })
 };
 
 const deleteTools = (context, data) => {
-    toolService.deleteTool(data)
-        .catch((error) => {
-            console.log(error);
+    API.deleteTool(data)
+        .then(() => {
+            API.getAllTools()
+                .then((response) => {
+                    context.commit('TOOLS_UPDATE', response.data);
+                })
+        })
+        .catch((err) => {
+            console.log(err);
         })
 };
 

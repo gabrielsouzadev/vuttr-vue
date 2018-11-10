@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <Tools/>
+    <ToolsList/>
   </div>
 </template>
 
 <script>
-import Tools from './components/Tools.vue'
+import ToolsList from './components/Tools/ToolsList.vue'
 
 export default {
     name: 'app',
 
     components: {
-        Tools
+        ToolsList
     }
 }
 </script>
