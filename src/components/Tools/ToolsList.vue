@@ -1,13 +1,14 @@
 <template>
-    <div class="tools-list">
-        <input class="input" type="text" v-model="q">
-        <input type="checkbox" v-model="tags"> <p>Buscar apenas por tags</p>
+    <section class="tools-list">
+        <div class="container">
+            <input class="input" type="text" v-model="q">
+            <input type="checkbox" v-model="tags"> <p>Buscar apenas por tags</p>
 
-        <a class="bt" @click="addItem()">Adicionar</a>
+            <a class="bt" @click="addItem()">Adicionar</a>
 
-        <ToolsListItem v-for="tool in tools" :key="tool.id" :tool="tool"/>
-
-    </div>
+            <ToolsListItem v-for="tool in tools" :key="tool.id" :tool="tool"/>
+        </div>
+    </section>
 </template>
 
 <script>
@@ -51,7 +52,9 @@ export default {
             }
         },
         addItem() {
-            this.$modal.show(ToolsListItemAdd)
+            this.$modal.show(ToolsListItemAdd, {
+                height: 'auto'
+            })
         }
     },
 

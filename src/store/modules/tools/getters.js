@@ -1,5 +1,5 @@
-const tools = state => state.tools;
+const tools = state => state.tools
 
 export default {
-    tools,
-};
+    tools
+}
