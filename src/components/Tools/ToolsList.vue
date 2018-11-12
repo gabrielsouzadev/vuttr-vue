@@ -1,12 +1,20 @@
 <template>
     <section class="tools-list">
         <div class="container">
-            <input class="input" type="text" v-model="q">
-            <input type="checkbox" v-model="tags"> <p>Buscar apenas por tags</p>
-
-            <a class="bt" @click="addItem()">Adicionar</a>
-
-            <ToolsListItem v-for="tool in tools" :key="tool.id" :tool="tool"/>
+            <div class="tools-list__row">
+                <div class="tools-list__col">
+                    <div class="form-group form-group--search">
+                        <input class="input input--search" type="text" v-model="q" placeholder="Buscar por...">
+                    </div>
+                    <input type="checkbox" v-model="tags"> <p>Procurar apenas por tags</p>
+                </div>
+                <div class="tools-list__col">
+                    <a class="bt" @click="addItem()">Adicionar</a>
+                </div>
+            </div>
+            <div class="row">
+                <ToolsListItem v-for="tool in tools" :key="tool.id" :tool="tool"/>
+            </div>
         </div>
     </section>
 </template>

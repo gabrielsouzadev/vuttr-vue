@@ -1,8 +1,7 @@
 /*
 * Grid
 */
-
-@mixin grid($with: $container) {
+@mixin grid($width: $container) {
     width: 100%;
     margin: 0 auto;
     padding: 0 2rem;

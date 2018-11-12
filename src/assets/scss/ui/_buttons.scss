@@ -1,5 +1,4 @@
 /* Buttons */
-
 .bt {
     display: inline-flex;
     justify-content: center;
@@ -8,12 +7,11 @@
     border: 0;
     border-radius: $border-radius;
     padding: 0 2.6rem;
-    margin: .7rem;
+    margin: 0.7rem;
     background: $color-primary;
     color: $text-color-secondary;
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     font-weight: 600;
-    
     @include transition;
 
     &:hover {

@@ -22,7 +22,7 @@ export default {
     methods: {
         deleteTool(id) {
             this.$store.dispatch('tools/deleteTools', id)
-            this.$modal.hide('dynamic-modal');
+            this.$emit('close')
         }
     }
 }

@@ -1,0 +1,9 @@
+/*
+* Icons
+*/
+@mixin icon($name: '', $type: 'svg') {
+    background-image: url("#{$img-dir}/#{$name}.#{$type}");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}

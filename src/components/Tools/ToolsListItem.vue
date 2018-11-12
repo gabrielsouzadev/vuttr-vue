@@ -1,12 +1,12 @@
 <template>
     <div class="tools-list__item">
-        <a v-bind:href="tool.link" class="tools-list__item__title" target="_blank">{{ tool.title }}</a>
+        <h2 v-bind:href="tool.link" class="tools-list__item__title" target="_blank">{{ tool.title }}</h2>
         <p class="tools-list__item__description">{{ tool.description }}</p>
 
         <div class="tools-list__tags">
-            <span class="tools-list__tags__item" v-for="tag in tool.tags" :key="tag">
+            <b class="tools-list__tags__item" v-for="tag in tool.tags" :key="tag">
                 #{{ tag }}
-            </span>
+            </b>
         </div>
         <a @click="deleteItem(tool.id, tool.title)">Remover</a>
     </div>
@@ -32,6 +32,8 @@ export default {
             this.$modal.show(ToolsListItemDelete, {
                 id: id,
                 title: title
+            }, {
+                height: 'auto'
             })
         }
     }

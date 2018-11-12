@@ -1,37 +1,52 @@
 <template>
-    <div class="">
-        <div class="form-group">
-            <label class="label">Title</label>
-            <input class="input" type="text" v-model="data.title">
+    <form class="form" v-on:submit.prevent="addTool">
+        <div class="form__group">
+            <label>Título</label>
+            <input type="text" name="title" v-model="data.title" v-validate="'required|alpha'" :class="{'input': true, 'is-danger': errors.has('title') }">
         </div>
-        <div class="form-group">
-            <label class="label">Link</label>
-            <input class="input" type="text" v-model="data.link">
+        <div class="form__group">
+            <label>Link</label>
+            <input type="text" name="link" v-model="data.link" v-validate="'required|url'" :class="{'input': true, 'is-danger': errors.has('link') }">
         </div>
-        <div class="form-group">
-            <label class="label">Title</label>
-            <input class="textarea" type="text" v-model="data.description">
+        <div class="form__group">
+            <label>Descrição</label>
+            <textarea name="description" rows="8" cols="80" v-model="data.description" v-validate="'required|alpha'" :class="{'input': true, 'is-danger': errors.has('description') }"></textarea>
         </div>
-        <div class="form-group">
-            <label class="label">Tags</label>
-            <input class="input" type="text" v-model="data.tags">
+        <div class="form__group">
+            <label>Tags</label>
+            <input type="text" name="tags" v-model="data.tags" v-validate="'required'" :class="{'input': true, 'is-danger': errors.has('tags') }">
         </div>
-        <a class="bt"> Criar </a>
-    </div>
+        <button class="bt" type="submit">Adicionar</button>
+    </form>
 </template>
 
 <script>
 export default {
     data: () => ({
-        data: []
+        data: {
+            title: '',
+            link: '',
+            description: '',
+            tags: ''
+        }
     }),
 
-    computed: {
-
-    },
-
     methods: {
+        addTool() {
+            this.$validator.validateAll()
+                .then((result) => {
+                    if (result) {
+                        let tags = this.data.tags
+                        tags = tags.replace(/\s/g, "").split(',')
+                        this.data.tags = tags
 
+                        this.$store.dispatch('tools/createTools', this.data)
+                        this.$emit('close')
+                    } else {
+                        console.log(this.errors)
+                    }
+            })
+        }
     }
 }
 </script>
