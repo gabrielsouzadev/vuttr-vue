@@ -1,14 +1,13 @@
 <template>
-    <div class="tools-list__item">
-        <h2 v-bind:href="tool.link" class="tools-list__item__title" target="_blank">{{ tool.title }}</h2>
-        <p class="tools-list__item__description">{{ tool.description }}</p>
-
-        <div class="tools-list__tags">
-            <b class="tools-list__tags__item" v-for="tag in tool.tags" :key="tag">
+    <div class="tools-list-item">
+        <a class="tools-list-item__title" target="_blank" v-bind:href="tool.link">{{ tool.title }}</a>
+        <p class="tools-list-item__description">{{ tool.description }}</p>
+        <div class="tools-list-item__tags">
+            <b class="tools-list-item__tags__item" v-for="tag in tool.tags" :key="tag">
                 #{{ tag }}
             </b>
         </div>
-        <a @click="deleteItem(tool.id, tool.title)">Remover</a>
+        <button class="tools-list-item__delete" @click="deleteItem(tool.id, tool.title)">Remover</button>
     </div>
 </template>
 

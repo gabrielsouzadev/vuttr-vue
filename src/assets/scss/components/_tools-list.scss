@@ -4,49 +4,33 @@
 .tools-list {
     margin-top: 5rem;
 
-    &__row {
+    &__container {
+        @include make-container($container);
+    }
+
+    &__filter {
         display: flex;
-        flex-wrap: wrap;
         align-items: center;
         justify-content: space-between;
-    }
 
-    &__col {
-        flex-grow: 1;
-        max-width: 50%;
-        display: flex;
-        align-items: center;
-    }
-
-    &__item {
-        margin-top: 2rem;
-        padding: 2.5rem;
-        background: #FFF;
-        border-radius: $border-radius;
-        box-shadow: 0 0 0 #EBEAED;
-        border: solid 0.1rem #EBEAED;
-        @include transition;
-
-        &:hover {
-            box-shadow: 0 0.5rem 0.7rem #EBEAED;
+        &__add,
+        &__search {
+            flex-grow: 1;
+            max-width: 50%;
         }
 
-        &__title {
-            display: inline-block;
-            margin: 0;
-            color: $color-primary;
-            // text-decoration: underline;
-            @include transition;
-            font-size: 2rem;
+        &__search {
+            display: flex;
+            align-items: center;
 
-            &:hover {
-                cursor: pointer;
-                color: $color-primary-dark;
+            .input {
+                flex-grow: 1;
+                max-width: 50%;
             }
         }
 
-        &__description {
-            margin-top: 2rem;
+        &__add {
+            text-align: right;
         }
     }
 }

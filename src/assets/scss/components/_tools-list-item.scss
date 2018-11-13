@@ -1,0 +1,50 @@
+/*
+* Tools-list-item Component
+*/
+.tools-list-item {
+    margin-top: 2rem;
+    padding: 2.5rem;
+    background: #FFF;
+    border-radius: $border-radius;
+    box-shadow: 0 0 0 #EBEAED;
+    border: solid 0.1rem #EBEAED;
+    position: relative;
+    @include transition;
+
+    &:hover {
+        box-shadow: 0 0.5rem 0.7rem #EBEAED;
+    }
+
+    &__title {
+        margin: 0;
+        display: inline-flex;
+        @include transition;
+        font-size: 2.4rem;
+        font-weight: 600;
+
+        &:hover {
+            color: $color-primary;
+        }
+    }
+
+    &__tags__item {
+        margin: 0 0.5rem;
+
+        &:first-of-type {
+            margin-left: 0;
+        }
+    }
+
+    &__delete {
+        position: absolute;
+        top: 2.5rem;
+        right: 2.5rem;
+        background: 0;
+        border: 0;
+        @include transition;
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}

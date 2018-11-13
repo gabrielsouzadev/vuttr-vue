@@ -3,4 +3,8 @@
 */
 .header {
     margin-top: 5vw;
+
+    &__container {
+        @include make-container($container);
+    }
 }

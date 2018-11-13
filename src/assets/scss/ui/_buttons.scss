@@ -3,16 +3,17 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    height: 5rem;
+    height: 4rem;
     border: 0;
     border-radius: $border-radius;
     padding: 0 2.6rem;
-    margin: 0.7rem;
     background: $color-primary;
     color: $text-color-secondary;
     font-size: 1.4rem;
     font-weight: 600;
     @include transition;
+    margin-left: 1.5rem;
+    font-family: $font-family-base;
 
     &:hover {
         background: $color-secondary;
@@ -25,5 +26,14 @@
 
     &:focus {
         outline: none;
+    }
+
+    &--secondary {
+        background: #E1E7FD;
+        color: $color-primary;
+
+        &:hover {
+            background: darken(#E1E7FD, 7);
+        }
     }
 }

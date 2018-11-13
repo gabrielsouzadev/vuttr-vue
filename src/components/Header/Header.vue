@@ -1,6 +1,6 @@
 <template>
     <header class="header">
-        <div class="container">
+        <div class="header__container">
             <h1 class="title">{{ title }}</h1>
             <h2 class="subtitle">{{ subtitle }}</h2>
         </div>
@@ -8,8 +8,6 @@
 </template>
 
 <script>
-import HeaderBar from './HeaderBar.vue'
-
 export default {
     props: {
         title: {
@@ -20,13 +18,6 @@ export default {
             type: String,
             required: true
         }
-    },
-
-    components: {
-        HeaderBar
     }
 }
 </script>
-
-<style lang="css">
-</style>

@@ -16,7 +16,12 @@
             <label>Tags</label>
             <input type="text" name="tags" v-model="data.tags" v-validate="'required'" :class="{'input': true, 'is-danger': errors.has('tags') }">
         </div>
-        <button class="bt" type="submit">Adicionar</button>
+        <div class="form__group">
+            <div class="row row--right">
+                <button class="bt bt--secondary" @click="$emit('close')">Cancelar</button>
+                <button class="bt" type="submit">Adicionar</button>
+            </div>
+        </div>
     </form>
 </template>
 

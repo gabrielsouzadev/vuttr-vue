@@ -1,13 +1,9 @@
 /*
 * Grid
 */
-@mixin grid($width: $container) {
+@mixin make-container($width: $container) {
     width: 100%;
     margin: 0 auto;
     padding: 0 2rem;
     max-width: $container;
-}
-
-.container {
-    @include grid($container);
 }

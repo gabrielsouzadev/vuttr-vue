@@ -1,0 +1,13 @@
+/*
+* Modal
+*/
+// important to overlay css
+
+.v--modal-overlay {
+    background: rgba(23, 12, 58, .6) !important;
+
+    .v--modal {
+        height: auto !important;
+        padding: 5rem;
+    }
+}

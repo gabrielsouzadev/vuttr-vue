@@ -1,19 +1,17 @@
 /*
 * Typograph
 */
-
 .title {
     font-size: $h1-size;
-    font-weight: 600;
+    font-weight: 700;
 }
 
 .subtitle {
     font-size: $h3-size;
-    font-weight: 600;
+    font-weight: 700;
 }
 
-.title,
-.subtitle {
+.subtitle,
+.title {
     margin: 1rem 0;
 }
-
