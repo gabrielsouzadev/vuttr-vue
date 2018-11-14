@@ -41,10 +41,14 @@
         right: 2.5rem;
         background: 0;
         border: 0;
+        color: $color-error;
+        font-size: 1.5rem;
+        font-weight: 600;
         @include transition;
 
         &:hover {
             cursor: pointer;
+            color: darken($color-error, 7);
         }
     }
 }

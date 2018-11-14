@@ -1,13 +1,49 @@
 /*
 * Modal
 */
-// important to overlay css
-
 .v--modal-overlay {
     background: rgba(23, 12, 58, .6) !important;
 
     .v--modal {
         height: auto !important;
-        padding: 5rem;
+        padding: 3rem;
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+}
+
+.modal {
+    &__title {
+        position: relative;
+
+        .title {
+            font-size: 2.4rem;
+            font-weight: 600;
+        }
+
+        .close {
+            position: absolute;
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
+            width: 1.2rem;
+            height: 1.2rem;
+            @include icon('close');
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__container {
+        margin-top: 3rem;
+    }
+
+    &__footer {
+        margin-top: 3rem;
+        text-align: right;
     }
 }

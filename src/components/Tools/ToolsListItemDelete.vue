@@ -1,8 +1,16 @@
 <template>
-    <div class="tools-list__item__delete">
-        Você tem certeza que deseja remover a ferramenta {{ title }} ?
-        <span v-on:click="deleteTool(id)">Sim</span>
-        <span @click="$emit('close')">Cancelar</span>
+    <div class="modal">
+        <div class="modal__title">
+            <span class="title">Remover ferramenta</span>
+            <span class="close" @click="$emit('close')"></span>
+        </div>
+        <div class="modal__container">
+            Você tem certeza que deseja remover a ferramenta {{ title }} ?
+        </div>
+        <div class="modal__footer">
+            <button class="bt bt--error" @click="$emit('close')">Cancelar</button>
+            <button class="bt" v-on:click="deleteTool(id)">Remover</button>
+        </div>
     </div>
 </template>
 

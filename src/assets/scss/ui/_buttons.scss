@@ -36,4 +36,12 @@
             background: darken(#E1E7FD, 7);
         }
     }
+
+    &--error {
+        background: $color-error;
+
+        &:hover {
+            background: darken($color-error, 7);
+        }
+    }
 }

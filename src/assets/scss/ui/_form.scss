@@ -3,8 +3,9 @@
 */
 .label {
     display: inline-flex;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     font-weight: 600;
+    font-size: 1.8rem;
 }
 
 .input,
@@ -30,15 +31,18 @@
 }
 
 .textarea {
-    min-height: 18rem;
+    min-height: 13rem;
     padding: 1.7rem;
+    resize: none;
 }
 
 .checkbox {
     position: relative;
     cursor: pointer;
-    margin: 1.5rem;
+    margin-left: 1.5rem;
     height: 1.5rem;
+    display: flex;
+    align-items: center;
 
     & input {
         position: relative;
@@ -62,5 +66,20 @@
     & input:checked + span {
         background: $color-primary;
         border-color: $color-primary;
+    }
+
+    .text {
+        margin: 0 0 0 1.5rem;
+    }
+}
+
+.form {
+    &__group {
+        margin-top: 1.5rem;
+
+        &--submit {
+            text-align: right;
+            margin-top: 3rem;
+        }
     }
 }

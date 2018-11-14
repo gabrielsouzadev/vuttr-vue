@@ -3,12 +3,13 @@
         <div class="tools-list__container">
             <div class="tools-list__filter">
                 <div class="tools-list__filter__search">
-                    <input class="input input--search" type="text" v-model="q" placeholder="Buscar por...">
+                    <input class="input input--search" type="text" v-model="q" placeholder="Buscar...">
                     <label class="checkbox">
                         <input type="checkbox" v-model="tags"/>
                         <span></span>
+                        <p class="text">Buscar apenas por tags</p>
                     </label>
-                    <p class="text">Buscar apenas por tags</p>
+
                 </div>
                 <div class="tools-list__filter__add">
                     <button class="bt" @click="addItem()">Adicionar</button>
@@ -39,17 +40,20 @@ export default {
     computed: {
         ...mapGetters({
             tools: 'tools/tools'
-        })
+        }),
+        filterTools() {
+            return `${this.q}|${this.tags}`
+        }
     },
 
     watch: {
-        q() {
-            this.fetch()
+        filterTools() {
+            this.fetchTools()
         }
     },
 
     methods: {
-        fetch() {
+        fetchTools() {
             let searchType = this.tags ? 'Tags' : 'Tool'
             let keywords = this.q.replace(/\s/g,'')
 

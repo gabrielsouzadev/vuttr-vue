@@ -1,28 +1,64 @@
 <template>
-    <form class="form" v-on:submit.prevent="addTool">
-        <div class="form__group">
-            <label>Título</label>
-            <input type="text" name="title" v-model="data.title" v-validate="'required|alpha'" :class="{'input': true, 'is-danger': errors.has('title') }">
+    <div class="modal">
+        <div class="modal__title">
+            <span class="title">Adicionar ferramenta</span>
+            <span class="close" @click="$emit('close')"></span>
         </div>
-        <div class="form__group">
-            <label>Link</label>
-            <input type="text" name="link" v-model="data.link" v-validate="'required|url'" :class="{'input': true, 'is-danger': errors.has('link') }">
+        <div class="modal__container">
+            <form class="form" v-on:submit.prevent="addTool">
+                <div class="form__group">
+                    <label class="label">Título</label>
+                    <input
+                        type="text"
+                        name="title"
+                        placeholder="Ex: Slack"
+                        v-model="data.title"
+                        v-validate="'required|alpha'"
+                        :class="{'input': true, 'is-danger': errors.has('title') }"
+                    >
+                </div>
+                <div class="form__group">
+                    <label class="label">Link</label>
+                    <input
+                        type="text"
+                        name="link"
+                        placeholder="Ex: https://slack.com/"
+                        v-model="data.link"
+                        v-validate="'required|url'"
+                        :class="{'input': true, 'is-danger': errors.has('link') }"
+                    >
+                </div>
+                <div class="form__group">
+                    <label class="label">Descrição</label>
+                    <textarea
+                        name="description"
+                        rows="8"
+                        cols="80"
+                        placeholder="Ex: Uma plataforma de comunicação interna para sua empresa"
+                        v-model="data.description"
+                        v-validate="'required'"
+                        :class="{'textarea': true, 'is-danger': errors.has('description') }"
+                    >
+                    </textarea>
+                </div>
+                <div class="form__group">
+                    <label class="label">Tags</label>
+                    <input
+                        type="text"
+                        name="tags"
+                        placeholder="Ex: nodejs, chat, communication, chatbot"
+                        v-model="data.tags"
+                        v-validate="'required'"
+                        :class="{'input': true, 'is-danger': errors.has('tags') }"
+                    >
+                </div>
+                <div class="form__group form__group--submit">
+                    <button class="bt bt--error" @click="$emit('close')">Cancelar</button>
+                    <button class="bt" type="submit">Adicionar</button>
+                </div>
+            </form>
         </div>
-        <div class="form__group">
-            <label>Descrição</label>
-            <textarea name="description" rows="8" cols="80" v-model="data.description" v-validate="'required|alpha'" :class="{'input': true, 'is-danger': errors.has('description') }"></textarea>
-        </div>
-        <div class="form__group">
-            <label>Tags</label>
-            <input type="text" name="tags" v-model="data.tags" v-validate="'required'" :class="{'input': true, 'is-danger': errors.has('tags') }">
-        </div>
-        <div class="form__group">
-            <div class="row row--right">
-                <button class="bt bt--secondary" @click="$emit('close')">Cancelar</button>
-                <button class="bt" type="submit">Adicionar</button>
-            </div>
-        </div>
-    </form>
+    </div>
 </template>
 
 <script>
