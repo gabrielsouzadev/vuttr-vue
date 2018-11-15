@@ -7,7 +7,7 @@
                     <label class="checkbox">
                         <input type="checkbox" v-model="tags"/>
                         <span></span>
-                        <p class="text">Buscar apenas por tags</p>
+                        <p class="text">{{ $t("filter.tags") }}</p>
                     </label>
                 </div>
                 <div class="tools-list__filter__add">

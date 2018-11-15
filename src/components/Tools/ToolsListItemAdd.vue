@@ -6,7 +6,7 @@
         </div>
         <div class="modal__container">
             <form class="form" v-on:submit.prevent="addTool">
-                <div :class="{'form__group': true, 'form__group--error': errors.has('link') }">
+                <div :class="{'form__group': true, 'form__group--error': errors.has('title') }">
                     <label class="label">{{ $t("forms.title") }}</label>
                     <input
                         type="text"
@@ -43,7 +43,7 @@
                         class="textarea"
                         placeholder="Ex: Uma plataforma de comunicação interna para sua empresa"
                         v-model="data.description"
-                        v-validate="'required'"
+                        v-validate="'required|alpha'"
                     >
                     </textarea>
                     <div class="error">

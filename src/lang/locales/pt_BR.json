@@ -24,5 +24,8 @@
 			"description": "Preencha corretamente a descrição",
 			"tags": "Preencha corretamente as tags"
 		}
+	},
+	"filter": {
+		"tags": "Buscar apenas por tags"
 	}
 }

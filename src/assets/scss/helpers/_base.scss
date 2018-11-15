@@ -1,7 +1,6 @@
 /*
 * Base
 */
-
 *,
 *::after,
 *::before {
@@ -17,14 +16,18 @@ html {
 }
 
 body {
-    font-family: $font-family-base;
+	font-family: $font-family-base;
 	font-size: $font-size-base;
 	color: $text-color;
-    background: $body-bg;
-    position: relative;
+	background: $body-bg;
+	position: relative;
 }
 
 a {
 	text-decoration: none;
 	color: inherit;
+}
+
+button:focus {
+	outline: none;
 }
