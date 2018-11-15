@@ -31,29 +31,27 @@ const searchTags = (context, data) => {
 }
 
 const createTools = (context, data) => {
-    API.createTool(data)
-        .then(() => {
-            API.getAllTools()
-                .then((response) => {
-                    context.commit('TOOLS_UPDATE', response.data)
-                })
-        })
-        .catch((err) => {
-            console.log(err)
-        })
+    return new Promise((resolve, reject) => {
+        API.createTool(data)
+            .then(() => {
+                resolve(data)
+            })
+            .catch((err) => {
+                reject(err)
+            })
+    })
 }
 
 const deleteTools = (context, data) => {
-    API.deleteTool(data)
-        .then(() => {
-            API.getAllTools()
-                .then((response) => {
-                    context.commit('TOOLS_UPDATE', response.data)
-                })
-        })
-        .catch((err) => {
-            console.log(err)
-        })
+    return new Promise((resolve, reject) => {
+        API.deleteTool(data)
+            .then(() => {
+                resolve(data)
+            })
+            .catch((err) => {
+                reject(err)
+            })
+    })
 }
 
 export default {

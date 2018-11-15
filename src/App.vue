@@ -2,6 +2,7 @@
     <div id="app">
         <Header :title="title" :subtitle="subtitle"/>
         <ToolsList />
+        <notifications group="notification"/>
     </div>
 </template>
 

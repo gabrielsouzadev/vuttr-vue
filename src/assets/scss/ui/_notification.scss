@@ -1,0 +1,41 @@
+/*
+* Notification
+*/
+.notification {
+    padding: 0;
+    margin: 2rem;
+    font-family: $font-family-base;
+    font-size: 1.8rem;
+    color: #ffffff;
+    border: 0;
+    border-radius: $border-radius;
+    border-left: 0;
+
+    .notification-title {
+        font-size: 1.8rem;
+    }
+
+    .notification-content {
+        font-size: 1.6rem;
+        line-height: 1.9;
+        margin-top: 1.5rem;
+    }
+
+    &.error {
+        background: $color-error;
+    }
+
+    &.success {
+        background: $color-success;
+        border-left: 0;
+        margin: 2rem;
+        padding: 3rem;
+        box-shadow: 0 0.5rem 1rem #EBEAED;
+    }
+}
+// override default style
+
+.notifications {
+    min-width: 450px !important;
+    width: 450px !important;
+}

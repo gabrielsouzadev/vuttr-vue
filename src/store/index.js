@@ -5,7 +5,7 @@ import toolsModule from './modules/tools'
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  modules: {
-    tools: toolsModule,
-  },
+    modules: {
+        tools: toolsModule,
+    },
 })

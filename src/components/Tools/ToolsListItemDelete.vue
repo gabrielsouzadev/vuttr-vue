@@ -11,7 +11,7 @@
         </div>
         <div class="modal__footer">
             <button class="bt bt--error" @click="$emit('close')">{{ $t("platform.cancel") }}</button>
-            <button class="bt" v-on:click="deleteTool(id)">{{ $t("platform.remove") }}</button>
+            <button class="bt" v-on:click="deleteTool(id, title)">{{ $t("platform.remove") }}</button>
         </div>
     </div>
 </template>
@@ -30,8 +30,18 @@ export default {
     },
 
     methods: {
-        deleteTool(id) {
+        deleteTool(id, title) {
             this.$store.dispatch('tools/deleteTools', id)
+                .then(() => {
+                    this.$store.dispatch('tools/getTools')
+                    this.$notify({
+                      group: 'notification',
+                      title: 'Removido',
+                      text: 'A ferramenta <b>'+ title +'</b> foi removida com sucesso.',
+                      type: 'success',
+                      width: 450
+                    })
+                })
             this.$emit('close')
         }
     }

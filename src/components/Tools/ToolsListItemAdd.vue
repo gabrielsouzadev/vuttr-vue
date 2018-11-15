@@ -43,7 +43,7 @@
                         class="textarea"
                         placeholder="Ex: Uma plataforma de comunicação interna para sua empresa"
                         v-model="data.description"
-                        v-validate="'required|alpha'"
+                        v-validate="'required'"
                     >
                     </textarea>
                     <div class="error">
@@ -94,6 +94,17 @@ export default {
                         this.data.tags = tags
 
                         this.$store.dispatch('tools/createTools', this.data)
+                            .then(() => {
+                                this.$store.dispatch('tools/getTools')
+                                this.$notify({
+                                  group: 'notification',
+                                  title: 'Adicionada',
+                                  text: 'A ferramenta <b>'+ this.data.title +'</b> foi adicionada com sucesso.',
+                                  type: 'success',
+                                  width: 450
+                                })
+                            })
+
                         this.$emit('close')
                     } else {
                         console.log(this.errors)
