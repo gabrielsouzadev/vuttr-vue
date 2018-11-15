@@ -77,9 +77,36 @@
     &__group {
         margin-top: 1.5rem;
 
+        .error {
+            display: none;
+        }
+
         &--submit {
             text-align: right;
             margin-top: 3rem;
+        }
+
+        &--error {
+            .input,
+            .textarea {
+                border-color: $color-error;
+                background: #FEEFEE;
+                color: $color-error;
+            }
+
+            .error {
+                display: inline-flex;
+                justify-content: flex-end;
+                text-align: right;
+                min-width: 100%;
+                margin-top: 0.5rem;
+
+                .text {
+                    font-size: 1.8rem;
+                    font-weight: 400;
+                    color: $color-error;
+                }
+            }
         }
     }
 }

@@ -11,7 +11,7 @@
                     </label>
                 </div>
                 <div class="tools-list__filter__add">
-                    <button class="bt" @click="addItem()">Adicionar</button>
+                    <button class="bt" @click="addItem()">{{ $t("platform.add") }}</button>
                 </div>
             </div>
             <div class="tools-list__items">

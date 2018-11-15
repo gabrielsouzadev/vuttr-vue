@@ -1,15 +1,17 @@
 <template>
     <div class="modal">
         <div class="modal__title">
-            <span class="title">Remover ferramenta</span>
+            <span class="title">{{ $t("modals.removeTool.title") }}</span>
             <span class="close" @click="$emit('close')"></span>
         </div>
         <div class="modal__container">
-            Você tem certeza que deseja remover a ferramenta {{ title }} ?
+            <i18n path="modals.removeTool.body" tag="p">
+                <b place="title">{{ title }}</b>
+            </i18n>
         </div>
         <div class="modal__footer">
-            <button class="bt bt--error" @click="$emit('close')">Cancelar</button>
-            <button class="bt" v-on:click="deleteTool(id)">Remover</button>
+            <button class="bt bt--error" @click="$emit('close')">{{ $t("platform.cancel") }}</button>
+            <button class="bt" v-on:click="deleteTool(id)">{{ $t("platform.remove") }}</button>
         </div>
     </div>
 </template>

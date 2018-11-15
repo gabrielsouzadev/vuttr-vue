@@ -1,0 +1,28 @@
+{
+	"platform": {
+		"add": "Adicionar",
+		"cancel": "Cancelar",
+		"remove": "Remover"
+	},
+	"modals": {
+		"addTool": {
+			"title": "Adicionar ferramenta"
+		},
+		"removeTool": {
+			"title": "Remover ferramenta",
+			"body": "Você tem certeza que deseja remover a ferramenta {title} ?"
+		}
+	},
+	"forms": {
+		"title": "Título",
+		"link": "Link",
+		"description": "Descrição",
+		"tags": "tags",
+		"errors": {
+			"title": "Preencha corretamente o título",
+			"link": "Preencha corretamente o link",
+			"description": "Preencha corretamente a descrição",
+			"tags": "Preencha corretamente as tags"
+		}
+	}
+}
