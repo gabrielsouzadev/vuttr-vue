@@ -38,8 +38,7 @@ export default {
                       group: 'notification',
                       title: 'Removido',
                       text: 'A ferramenta <b>'+ title +'</b> foi removida com sucesso.',
-                      type: 'success',
-                      width: 450
+                      type: 'success'
                     })
                 })
             this.$emit('close')

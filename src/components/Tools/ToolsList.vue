@@ -53,13 +53,15 @@ export default {
 
     methods: {
         fetchTools() {
-            let searchType = this.tags ? 'Tags' : 'Tool'
-            let keywords = this.q.replace(/\s/g,'')
+            if(this.q && this.q != '') {
+                let searchType = this.tags ? 'Tags' : 'Tool'
+                let keywords = this.q.replace(/\s/g,'')
 
-            if(keywords) {
-                setTimeout(() => {
-                    this.$store.dispatch('tools/search' + searchType, keywords)
-                }, 150)
+                if(keywords) {
+                    setTimeout(() => {
+                        this.$store.dispatch('tools/search' + searchType, keywords)
+                    }, 150)
+                }
             } else {
                 this.$store.dispatch('tools/getTools')
             }

@@ -100,8 +100,7 @@ export default {
                                   group: 'notification',
                                   title: 'Adicionada',
                                   text: 'A ferramenta <b>'+ this.data.title +'</b> foi adicionada com sucesso.',
-                                  type: 'success',
-                                  width: 450
+                                  type: 'success'
                                 })
                             })
 

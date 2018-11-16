@@ -4,7 +4,7 @@
         <p class="tools-list-item__description">{{ tool.description }}</p>
         <div class="tools-list-item__tags">
             <b class="tools-list-item__tags__item" v-for="tag in tool.tags" :key="tag">
-                #{{ tag }}
+                <b v-html="highlight(tag)"></b>
             </b>
         </div>
         <button class="tools-list-item__delete" @click="deleteItem(tool.id, tool.title)">{{ $t("platform.remove") }}</button>
@@ -34,6 +34,20 @@ export default {
             }, {
                 height: 'auto'
             })
+        },
+        highlight(tag) {
+            let parentTags = this.$parent.tags
+            let parentQuery = this.$parent.q
+
+            if(parentTags && parentQuery) {
+                let iQuery = new RegExp(parentQuery, 'ig')
+
+                tag = tag.toString().replace(iQuery, function(matchedTxt){
+                    return ('<span class=\'highlight\'>' + matchedTxt + '</span>');
+                })
+            }
+
+            return '#' + tag
         }
     }
 }

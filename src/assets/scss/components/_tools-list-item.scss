@@ -33,6 +33,12 @@
         &:first-of-type {
             margin-left: 0;
         }
+
+        b {
+            .highlight {
+                background: #CAD6FC;
+            }
+        }
     }
 
     &__delete {
@@ -43,7 +49,6 @@
         border: 0;
         color: $color-error;
         font-size: 1.5rem;
-        font-weight: 600;
         @include transition;
 
         &:hover {
