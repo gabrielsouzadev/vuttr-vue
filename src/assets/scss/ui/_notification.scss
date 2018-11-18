@@ -23,6 +23,10 @@
 
     &.error {
         background: $color-error;
+        border-left: 0;
+        margin: 2rem;
+        padding: 3rem;
+        box-shadow: 0 0.5rem 1rem #EBEAED;
     }
 
     &.success {
