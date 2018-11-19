@@ -74,7 +74,7 @@ Deletar uma ferramenta existente
 
 ## :dolphin: Conteinerização (Docker)
 
-Meu container foi criado a partir de uma imagem node (9.11.1), então instalei o http-server global pelo yarn para executar todo static content da aplicação após foi feita a instalação das dependências do projeto, então executado os comandos de compilar e minificar para produção
+O container foi criado a partir de uma imagem node (9.11.1), então instalei o http-server global pelo yarn para executar todo static content da aplicação após foi feita a instalação das dependências do projeto, então executado os comandos de compilar e minificar para produção.
 
 ```
 FROM node:9.11.1-alpine
