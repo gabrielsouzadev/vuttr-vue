@@ -1,26 +1,54 @@
-# vuttr-vue
+# VUTTR-Vue
 
-## Project setup
+Desafio front-end bossabox de construir uma aplicação simples para gerenciar ferramentas com seus respectios nomes, links, descrioções e tags.
+
+## :book: Sumário
+
+* Dependências
+* Guia de instalação
+  * Como instalar
+  * Executando a aplicação
+* Funcionalidades
+
+## :gear: Dependências
+
+* [Node](https://nodejs.org/en/) (10.13.0 ou maior)
+* [Yarn](https://yarnpkg.com/pt-BR/) ou [NPM](https://www.npmjs.com/)
+
+## :rocket: Guia de instalação
+
+Partindo do principio que você já esteja tenha instalado e rodando a [fake-api](https://gitlab.com/bossabox/challenge-fake-api/tree/master), neste tutorial daremos preferência ao uso do yarn.
+
+### Como instalar
+
+Clone este repositório:
 ```
-yarn install
+git clone https://github.com/gabrielsouzadev/vuttr-vue.git
 ```
 
-### Compiles and hot-reloads for development
+Entre na pasta e instale as dependências:
+```
+cd vuttr-vue && yarn install
+```
+
+### Executando a aplicação
+
+Iniciar a aplicação em modo de desenvolvimento
 ```
 yarn run serve
 ```
 
-### Compiles and minifies for production
+Compilar e minificar para produção
 ```
 yarn run build
 ```
 
-### Lints and fixes files
+Fazer a varredura do Lint nos arquivos
 ```
 yarn run lint
 ```
 
-### Run your unit tests
+Realizar os testes unitários
 ```
 yarn run test:unit
 ```
