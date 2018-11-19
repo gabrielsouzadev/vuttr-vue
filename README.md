@@ -3,7 +3,7 @@
 Desafio front-end bossabox de construir uma aplicação simples para gerenciar ferramentas com seus respectivos nomes, links, descrições e tags. Que deverá ser construído utilizando qualquer framework JavaScript de sua preferência, no meu caso [Vuejs](https://github.com/vuejs).
 
 ## :book: Sumário
-```
+
 * [Dependências](https://github.com/gabrielsouzadev/vuttr-vue#gear-depend%C3%AAncias)
 * [Guia de instalação](https://github.com/gabrielsouzadev/vuttr-vue#rocket-guia-de-instala%C3%A7%C3%A3o)
   * [Como instalar](https://github.com/gabrielsouzadev/vuttr-vue#como-instalar)
@@ -12,7 +12,7 @@ Desafio front-end bossabox de construir uma aplicação simples para gerenciar f
 * [Conteinerização (Docker)](https://github.com/gabrielsouzadev/vuttr-vue#dolphin-conteineriza%C3%A7%C3%A3o-docker)
   * [Comandos Docker](https://github.com/gabrielsouzadev/vuttr-vue#comandos-docker)
 * Porque o uso do Vuejs
-```
+
 ## :gear: Dependências
 
 * [Node](https://nodejs.org/en/) (10.13.0 ou maior)
