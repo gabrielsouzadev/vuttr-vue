@@ -1,6 +1,6 @@
 # VUTTR-Vue
 
-Desafio front-end bossabox de construir uma aplicação simples para gerenciar ferramentas com seus respectivos nomes, links, descrições e tags.
+Desafio front-end bossabox de construir uma aplicação simples para gerenciar ferramentas com seus respectivos nomes, links, descrições e tags. Que deverá ser construído utilizando qualquer framework JavaScript de sua preferência, no meu caso [Vuejs](https://github.com/vuejs).
 
 ## :book: Sumário
 
@@ -10,6 +10,7 @@ Desafio front-end bossabox de construir uma aplicação simples para gerenciar f
   * Executando a aplicação
 * Funcionalidades
 * Conteinerização (Docker)
+  * Comandos Docker
 * Porque o uso do Vuejs
 
 ## :gear: Dependências
@@ -67,8 +68,44 @@ Filtrar ferramentas por tags
 
 Adicionar uma nova ferramenta
 
-![Adicionar]()
-
 Deletar uma ferramenta existente
 
 ![Deletar](https://i.imgur.com/ryogLT7.gif)
+
+## :dolphin: Conteinerização (Docker)
+
+Meu container foi criado a partir de uma imagem node (9.11.1), então instalei o http-server global pelo yarn para executar todo static content da aplicação após foi feita a instalação das dependências do projeto, então executado os comandos de compilar e minificar para produção
+
+```
+FROM node:9.11.1-alpine
+
+RUN yarn global add http-server
+
+WORKDIR /app
+
+COPY package*.json ./
+
+RUN yarn install
+
+COPY . .
+
+RUN yarn run build
+
+EXPOSE 8080
+
+CMD [ "http-server", "dist" ]
+```
+
+### Comandos Docker
+
+Compilar a imagem
+
+```
+docker build -t dockeruser/appname .
+```
+
+Executar a imagem (A aplicação estará acessível em localhost:8080)
+
+```
+docker run -it -p 8080:8080 --rm --name containername dockeruserk/appname
+```
