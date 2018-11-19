@@ -3,16 +3,16 @@
 Desafio front-end bossabox de construir uma aplicação simples para gerenciar ferramentas com seus respectivos nomes, links, descrições e tags. Que deverá ser construído utilizando qualquer framework JavaScript de sua preferência, no meu caso [Vuejs](https://github.com/vuejs).
 
 ## :book: Sumário
-
-* Dependências
-* Guia de instalação
-  * Como instalar
-  * Executando a aplicação
-* Funcionalidades
-* Conteinerização (Docker)
-  * Comandos Docker
+```
+* [Dependências](https://github.com/gabrielsouzadev/vuttr-vue#gear-depend%C3%AAncias)
+* [Guia de instalação](https://github.com/gabrielsouzadev/vuttr-vue#rocket-guia-de-instala%C3%A7%C3%A3o)
+  * [Como instalar](https://github.com/gabrielsouzadev/vuttr-vue#como-instalar)
+  * [Executando a aplicação](https://github.com/gabrielsouzadev/vuttr-vue#executando-a-aplica%C3%A7%C3%A3o)
+* [Funcionalidades](https://github.com/gabrielsouzadev/vuttr-vue#bulb-funcionalidades)
+* [Conteinerização (Docker)](https://github.com/gabrielsouzadev/vuttr-vue#dolphin-conteineriza%C3%A7%C3%A3o-docker)
+  * [Comandos Docker](https://github.com/gabrielsouzadev/vuttr-vue#comandos-docker)
 * Porque o uso do Vuejs
-
+```
 ## :gear: Dependências
 
 * [Node](https://nodejs.org/en/) (10.13.0 ou maior)
@@ -72,7 +72,7 @@ Deletar uma ferramenta existente
 
 ![Deletar](https://i.imgur.com/ryogLT7.gif)
 
-## :dolphin: Conteinerização (Docker)
+## :whale2: Conteinerização (Docker)
 
 O container foi criado a partir de uma imagem node (9.11.1), então instalei o http-server global pelo yarn para executar todo static content da aplicação após foi feita a instalação das dependências do projeto, então executado os comandos de compilar e minificar para produção.
 
@@ -107,5 +107,5 @@ docker build -t dockeruser/appname .
 Executar a imagem (A aplicação estará acessível em localhost:8080)
 
 ```
-docker run -it -p 8080:8080 --rm --name containername dockeruserk/appname
+docker run -it -p 8080:8080 --rm --name containername dockeruser/appname
 ```
