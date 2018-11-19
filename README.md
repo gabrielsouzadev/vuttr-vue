@@ -19,7 +19,7 @@ Desafio front-end bossabox de construir uma aplicação simples para gerenciar f
 
 ## :rocket: Guia de instalação
 
-Partindo do principio que você já tenha instalado as dependências necessárias e também que possua rodando a [fake-api](https://gitlab.com/bossabox/challenge-fake-api/tree/master) fornecida pela BossaBox. Neste tutorial daremos preferência ao uso do yarn para instalar a aplicação.
+Partindo do principio que você já tenha instalado as dependências necessárias e também que possua rodando a [fake-api](https://gitlab.com/bossabox/challenge-fake-api/tree/master) fornecida pela [BossaBox](https://bossabox.com/). Neste tutorial daremos preferência ao uso do yarn para instalar a aplicação.
 
 ### Como instalar
 
@@ -58,10 +58,17 @@ yarn run test:unit
 ## :bulb: Funcionalidades
 
 Filtrar ferramentas pelo título
+
 ![Filtros](https://i.imgur.com/tN14ZEp.gif)
 
 Filtrar ferramentas por tags
 
+![Filtros](https://i.imgur.com/2FYIPD5.gif)
+
 Adicionar uma nova ferramenta
 
+![Adicionar]()
+
 Deletar uma ferramenta existente
+
+![Deletar](https://i.imgur.com/ryogLT7.gif)
