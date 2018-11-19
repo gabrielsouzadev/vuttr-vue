@@ -58,7 +58,7 @@ yarn run test:unit
 ## :bulb: Funcionalidades
 
 Filtrar ferramentas pelo título
-![Filtros](https://i.imgur.com/tN14ZEp.gifv)
+![Filtros](https://i.imgur.com/tN14ZEp.gif)
 
 Filtrar ferramentas por tags
 
