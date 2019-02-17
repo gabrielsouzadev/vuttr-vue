@@ -11,7 +11,6 @@ Desafio front-end bossabox de construir uma aplicação simples para gerenciar f
 * [Funcionalidades](https://github.com/gabrielsouzadev/vuttr-vue#bulb-funcionalidades)
 * [Conteinerização (Docker)](https://github.com/gabrielsouzadev/vuttr-vue#dolphin-conteineriza%C3%A7%C3%A3o-docker)
   * [Comandos Docker](https://github.com/gabrielsouzadev/vuttr-vue#comandos-docker)
-* Porque o uso do Vuejs
 
 ## :gear: Dependências
 
@@ -65,8 +64,6 @@ Filtrar ferramentas pelo título
 Filtrar ferramentas por tags
 
 ![Filtros](https://i.imgur.com/2FYIPD5.gif)
-
-Adicionar uma nova ferramenta
 
 Deletar uma ferramenta existente
 
